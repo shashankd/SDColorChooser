@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.custom.color.chooser.SDColorChooser
+        android:id="@+id/sdColorChooser"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        custom:backgroundColor="@color/colorAccent"
+        custom:pivotHeight="@dimen/pivot_triangle_height"
+        custom:shadowColor="@android:color/darker_gray"
+        custom:shadowWidth="@dimen/divider_width" />
+
+    <com.custom.color.chooser.SDCircleView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sdCircleView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/sdColorChooser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        custom:borderColor="@color/colorAccent"
+        custom:borderWidth="@dimen/ring_width"
+        custom:showBorder="true" />
+
+</RelativeLayout>
