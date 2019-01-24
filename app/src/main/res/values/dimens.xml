@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="circleview_width">25dp</dimen>
-    <dimen name="circleview_height">25dp</dimen>
+    <dimen name="circleview_width">70dp</dimen>
+    <dimen name="circleview_height">70dp</dimen>
     <dimen name="divider_width">5dp</dimen>
     <dimen name="pivot_triangle_height">15dp</dimen>
     <dimen name="ring_width">2dp</dimen>
