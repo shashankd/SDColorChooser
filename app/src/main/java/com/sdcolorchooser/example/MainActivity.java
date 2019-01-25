@@ -1,8 +1,9 @@
 /**
  * Created by Shashank Degloorkar on 20-Jan-2019
  */
-package com.custom.color.chooser;
+package com.sdcolorchooser.example;
 
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -11,7 +12,11 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
+
+import com.sdcircleview.SDCircleView;
+import com.sdcolorchooser.ColorSelectionListener;
+import com.sdcolorchooser.CustomGridLayoutManager;
+import com.sdcolorchooser.SDColorChooser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,14 +34,15 @@ public class MainActivity extends AppCompatActivity {
         sdColorChooser = findViewById(R.id.sdColorChooser);
         sdColorChooser.setHighlightColor(Color.BLUE);
 
-        Bitmap icon_1 = BitmapFactory.decodeResource(getResources(), R.drawable.image_dog_1);
-        Bitmap icon_2 = BitmapFactory.decodeResource(getResources(), R.drawable.image_dog_2);
-        Bitmap icon_3 = BitmapFactory.decodeResource(getResources(), R.drawable.image_dog_3);
-        Bitmap icon_4 = BitmapFactory.decodeResource(getResources(), R.drawable.image_dog_4);
-        Bitmap icon_5 = BitmapFactory.decodeResource(getResources(), R.drawable.image_dog_5);
-        Bitmap icon_6 = BitmapFactory.decodeResource(getResources(), R.drawable.image_dog_6);
-        Bitmap icon_7 = BitmapFactory.decodeResource(getResources(), R.drawable.image_dog_7);
-        Bitmap icon_8 = BitmapFactory.decodeResource(getResources(), R.drawable.image_dog_8);
+        Resources resources = getResources();
+        Bitmap icon_1 = BitmapFactory.decodeResource(resources, R.drawable.image_dog_1);
+        Bitmap icon_2 = BitmapFactory.decodeResource(resources, R.drawable.image_dog_2);
+        Bitmap icon_3 = BitmapFactory.decodeResource(resources, R.drawable.image_dog_3);
+        Bitmap icon_4 = BitmapFactory.decodeResource(resources, R.drawable.image_dog_4);
+        Bitmap icon_5 = BitmapFactory.decodeResource(resources, R.drawable.image_dog_5);
+        Bitmap icon_6 = BitmapFactory.decodeResource(resources, R.drawable.image_dog_6);
+        Bitmap icon_7 = BitmapFactory.decodeResource(resources, R.drawable.image_dog_7);
+        Bitmap icon_8 = BitmapFactory.decodeResource(resources, R.drawable.image_dog_8);
 
         sdCircleView = findViewById(R.id.sdCircleView);
         sdCircleView.setInnerBitmapImage(icon_1);
@@ -67,6 +73,36 @@ public class MainActivity extends AppCompatActivity {
         drawableList.add(new BitmapDrawable(icon_7));
         drawableList.add(new BitmapDrawable(icon_8));
 
+        drawableList.add(new ColorDrawable(Color.RED));
+        drawableList.add(new ColorDrawable(Color.GREEN));
+        drawableList.add(new ColorDrawable(Color.BLACK));
+        drawableList.add(new ColorDrawable(Color.MAGENTA));
+        drawableList.add(new ColorDrawable(Color.WHITE));
+        drawableList.add(new ColorDrawable(Color.RED));
+        drawableList.add(new ColorDrawable(Color.GREEN));
+        drawableList.add(new ColorDrawable(Color.BLACK));
+        drawableList.add(new ColorDrawable(Color.MAGENTA));
+        drawableList.add(new ColorDrawable(Color.WHITE));
+        drawableList.add(new ColorDrawable(Color.RED));
+        drawableList.add(new ColorDrawable(Color.GREEN));
+        drawableList.add(new ColorDrawable(Color.BLACK));
+        drawableList.add(new ColorDrawable(Color.MAGENTA));
+        drawableList.add(new ColorDrawable(Color.WHITE));
+        drawableList.add(new ColorDrawable(Color.RED));
+        drawableList.add(new ColorDrawable(Color.GREEN));
+        drawableList.add(new ColorDrawable(Color.BLACK));
+        drawableList.add(new ColorDrawable(Color.MAGENTA));
+        drawableList.add(new ColorDrawable(Color.WHITE));
+        drawableList.add(new ColorDrawable(Color.RED));
+        drawableList.add(new ColorDrawable(Color.GREEN));
+        drawableList.add(new ColorDrawable(Color.BLACK));
+        drawableList.add(new ColorDrawable(Color.MAGENTA));
+        drawableList.add(new ColorDrawable(Color.WHITE));
+
+        int width = resources.getDimensionPixelSize(R.dimen.circleview_width);
+        int spacing = resources.getDimensionPixelSize(R.dimen.divider_width) + resources.getDimensionPixelSize(R.dimen.ring_width);
+        width = width + spacing;
+
         sdColorChooser.setColorSelectionListener(new ColorSelectionListener() {
             @Override
             public void onColorSelected(int selectedIndex) {
@@ -82,36 +118,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-        drawableList.add(new ColorDrawable(Color.RED));
-        drawableList.add(new ColorDrawable(Color.GREEN));
-        drawableList.add(new ColorDrawable(Color.BLACK));
-        drawableList.add(new ColorDrawable(Color.MAGENTA));
-        drawableList.add(new ColorDrawable(Color.WHITE));
-        drawableList.add(new ColorDrawable(Color.RED));
-        drawableList.add(new ColorDrawable(Color.GREEN));
-        drawableList.add(new ColorDrawable(Color.BLACK));
-        drawableList.add(new ColorDrawable(Color.MAGENTA));
-        drawableList.add(new ColorDrawable(Color.WHITE));
-        drawableList.add(new ColorDrawable(Color.RED));
-        drawableList.add(new ColorDrawable(Color.GREEN));
-        drawableList.add(new ColorDrawable(Color.BLACK));
-        drawableList.add(new ColorDrawable(Color.MAGENTA));
-        drawableList.add(new ColorDrawable(Color.WHITE));
-        drawableList.add(new ColorDrawable(Color.RED));
-        drawableList.add(new ColorDrawable(Color.GREEN));
-        drawableList.add(new ColorDrawable(Color.BLACK));
-        drawableList.add(new ColorDrawable(Color.MAGENTA));
-        drawableList.add(new ColorDrawable(Color.WHITE));
-        drawableList.add(new ColorDrawable(Color.RED));
-        drawableList.add(new ColorDrawable(Color.GREEN));
-        drawableList.add(new ColorDrawable(Color.BLACK));
-        drawableList.add(new ColorDrawable(Color.MAGENTA));
-        drawableList.add(new ColorDrawable(Color.WHITE));
-
-        int width = getResources().getDimensionPixelSize(R.dimen.circleview_width);
-        int spacing = getResources().getDimensionPixelSize(R.dimen.divider_width) + getResources().getDimensionPixelSize(R.dimen.ring_width);
-        width = width + spacing;
 
         // Choosing grid for displaying SDCircleViews
         sdColorChooser.setLayoutManager(new CustomGridLayoutManager(this, width));

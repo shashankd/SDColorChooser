@@ -2,7 +2,7 @@
  * Created by Shashank Degloorkar on 20-Jan-2019
  */
 
-package com.custom.color.chooser;
+package com.sdcolorchooser;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -23,9 +23,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
-import com.custom.color.chooser.adapter.RecyclerAdapter;
+import com.sdcolorchooser.adapter.RecyclerAdapter;
 
 import java.util.List;
+
 
 public class SDColorChooser extends LinearLayout {
     private final static String TAG = SDColorChooser.class.getSimpleName();

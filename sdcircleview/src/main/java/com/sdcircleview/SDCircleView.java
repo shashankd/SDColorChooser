@@ -1,4 +1,4 @@
-package com.custom.color.chooser;
+package com.sdcircleview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

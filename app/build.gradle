@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.custom.color.chooser"
+        applicationId "com.sdcolorchooser.example"
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
@@ -24,5 +24,8 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'org.jetbrains:annotations-java5:15.0'
-    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.sdcolorchooser:sdcolorchooser:1.0.0'
+    implementation 'com.sdcircleview:sdcircleview:1.0.0'
+//    implementation project(path: ':sdcolorchooser')
+//    implementation project(path: ':sdcircleview')
 }

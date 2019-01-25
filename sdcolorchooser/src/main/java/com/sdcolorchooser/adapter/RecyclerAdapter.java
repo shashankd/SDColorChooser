@@ -1,7 +1,7 @@
 /**
  * Created by Shashank Degloorkar on 20-Jan-2019
  */
-package com.custom.color.chooser.adapter;
+package com.sdcolorchooser.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
@@ -13,9 +13,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.custom.color.chooser.ColorSelectionListener;
-import com.custom.color.chooser.R;
-import com.custom.color.chooser.SDCircleView;
+import com.sdcircleview.SDCircleView;
+import com.sdcolorchooser.ColorSelectionListener;
+import com.sdcolorchooser.R;
 
 import java.util.List;
 
@@ -54,7 +54,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = inflateNewView(viewType);
-        Log.i(TAG, "onCreateViewHolder");
         return new ViewHolder(view);
     }
 
@@ -63,7 +62,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         Drawable drawable = drawablesList.get(position);
         final ViewHolder viewHolder = (ViewHolder) holder;
-        Log.i(TAG, "onBindViewHolder " + position);
 
         if (drawable instanceof ColorDrawable) {
             ColorDrawable colorDrawable = (ColorDrawable) drawable;
@@ -119,6 +117,4 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public void setHighlightColor(int highlightColor) {
         this.highlightColor = highlightColor;
     }
-
-
 }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.custom.color.chooser.SDColorChooser
+    <com.sdcolorchooser.SDColorChooser
         android:id="@+id/sdColorChooser"
         android:layout_width="300dp"
         android:layout_height="300dp"
@@ -18,7 +18,7 @@
         custom:shadowColor="@android:color/darker_gray"
         custom:shadowWidth="@dimen/divider_width" />
 
-    <com.custom.color.chooser.SDCircleView xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.sdcircleview.SDCircleView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:custom="http://schemas.android.com/apk/res-auto"
         android:id="@+id/sdCircleView"
         android:layout_width="250dp"

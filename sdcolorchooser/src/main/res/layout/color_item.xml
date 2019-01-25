@@ -7,13 +7,13 @@
     android:paddingLeft="15dp"
     android:paddingTop="15dp">
 
-    <com.custom.color.chooser.SDCircleView xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.sdcircleview.SDCircleView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:custom="http://schemas.android.com/apk/res-auto"
         android:id="@+id/sdCircleView"
         android:layout_width="@dimen/circleview_height"
         android:layout_height="@dimen/circleview_height"
-        custom:borderColor="@color/colorAccent"
+        custom:borderColor="#D81B60"
         custom:borderWidth="@dimen/ring_width"
-        custom:innerColor="@color/colorPrimary"
+        custom:innerColor="#008577"
         custom:showBorder="false" />
 </LinearLayout>

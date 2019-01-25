@@ -1,10 +1,11 @@
 /**
  * Created by Shashank Degloorkar on 22-Jan-2019
  */
-package com.custom.color.chooser;
+package com.sdcolorchooser;
 
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 
@@ -43,7 +44,7 @@ public class CustomGridLayoutManager extends GridLayoutManager {
         int height = getHeight();
         if (mColumnWidthChanged && mColumnWidth > 0 && width > 0 && height > 0) {
             int totalSpace;
-            if (getOrientation() == VERTICAL) {
+            if (getOrientation() == LinearLayoutManager.VERTICAL) {
                 totalSpace = width - getPaddingRight() - getPaddingLeft();
             } else {
                 totalSpace = height - getPaddingTop() - getPaddingBottom();
