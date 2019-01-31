@@ -189,7 +189,7 @@ public class SDColorChooser extends LinearLayout {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
-    public void setColorList(List<Drawable> drawableList) {
+    public void setDrawableList(List<Drawable> drawableList) {
         recyclerAdapter = new RecyclerAdapter(context, drawableList);
         recyclerAdapter.setSelectedIndex(selectedIndex);
         recyclerAdapter.setHighlightColor(highlightColor);
@@ -207,7 +207,7 @@ public class SDColorChooser extends LinearLayout {
         recyclerView.setAdapter(recyclerAdapter);
     }
 
-    public Drawable getSelectedColor() {
+    public Drawable getSelectedDrawable() {
         return null;
     }
 

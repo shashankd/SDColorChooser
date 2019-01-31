@@ -13,7 +13,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.sdcircleview.SDCircleView;
+import com.sdcircleimageview.SDCircleImageView;
 import com.sdcolorchooser.ColorSelectionListener;
 import com.sdcolorchooser.CustomGridLayoutManager;
 import com.sdcolorchooser.SDColorChooser;
@@ -24,7 +24,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     SDColorChooser sdColorChooser;
-    SDCircleView sdCircleView;
+    SDCircleImageView sdCircleImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
         Bitmap icon_7 = BitmapFactory.decodeResource(resources, R.drawable.image_dog_7);
         Bitmap icon_8 = BitmapFactory.decodeResource(resources, R.drawable.image_dog_8);
 
-        sdCircleView = findViewById(R.id.sdCircleView);
-        sdCircleView.setInnerBitmapImage(icon_1);
+        sdCircleImageView = findViewById(R.id.sdCircleImageView);
+        sdCircleImageView.setInnerBitmapImage(icon_1);
 
         final List<Drawable> drawableList = new ArrayList<>();
         drawableList.add(new BitmapDrawable(icon_1));
@@ -110,22 +110,21 @@ public class MainActivity extends AppCompatActivity {
                 if (drawable instanceof ColorDrawable) {
                     ColorDrawable colorDrawable = (ColorDrawable) drawable;
                     int color = colorDrawable.getColor();
-                    sdCircleView.setInnerColor(color);
-                    sdCircleView.setInnerBitmapImage(null);
+                    sdCircleImageView.setInnerColor(color);
+                    sdCircleImageView.setInnerBitmapImage(null);
                 } else {
                     BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
-                    sdCircleView.setInnerBitmapImage(bitmapDrawable.getBitmap());
+                    sdCircleImageView.setInnerBitmapImage(bitmapDrawable.getBitmap());
                 }
             }
         });
 
-        // Choosing grid for displaying SDCircleViews
+        // Choosing grid for displaying SDCircleImageViews
         sdColorChooser.setLayoutManager(new CustomGridLayoutManager(this, width));
 
-        // Choosing horizontal linear layout manager for displaying SDCircleViews
+        // Choosing horizontal linear layout manager for displaying SDCircleImageViews
         // sdColorChooser.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
-        sdColorChooser.setColorList(drawableList);
-
+        //sdColorChooser.setDrawableList(drawableList);
     }
 }

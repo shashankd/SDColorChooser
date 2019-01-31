@@ -15,12 +15,4 @@
             <enum name="position_bottom_right" value="6" />
         </attr>
     </declare-styleable>
-
-    <declare-styleable name="SDCircleView">
-        <attr name="showBorder" format="boolean" />
-        <attr name="borderColor" format="color" />
-        <attr name="borderWidth" format="dimension" />
-        <attr name="innerColor" format="color" />
-        <attr name="innerBitmap" format="reference" />
-    </declare-styleable>
 </resources>

@@ -1,37 +1,63 @@
-## Welcome to GitHub Pages
+## SDColorChooser Android Library
+    SDColorChooser is a chooser ViewGroup which returns selected imageview/color index
 
-You can use the [editor on GitHub](https://github.com/shashankd/SDColorChooser/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+![SDColorChooser] (https://raw.github.com/shashankd/SDColorChooser/master/screenshot.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+We can customise background color and other dimension properties.
+Pass the list of drawables (ImageDrawables or ColorDrawables)
 
-### Markdown
+# SDColorChooser
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### Gradle
+```
+dependencies {
+    ...
+    implementation 'com.sdcolorchooser:sdcolorchooser:1.0.1'
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+##### Using SDColorChooser in XML
+```xml
+<com.sdcolorchooser.SDColorChooser
+        android:id="@+id/sdColorChooser"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        custom:backgroundColor="@color/colorAccent"
+        custom:pivotHeight="@dimen/pivot_triangle_height"
+        custom:shadowColor="@android:color/darker_gray"
+        custom:shadowWidth="@dimen/divider_width" />
+```
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/shashankd/SDColorChooser/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+# SDCircleImageView
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Gradle
+```
+dependencies {
+    ...
+    implementation 'com.sdcircleimageview:sdcircleimageview:1.0.1'
+}
+```
+
+##### Using SDCircleImageView in XML
+```xml
+    <com.sdcircleimageview.SDCircleImageView
+        android:id="@+id/sdCircleView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/sdColorChooser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        custom:borderColor="@color/colorAccent"
+        custom:borderWidth="@dimen/ring_width"
+        custom:showBorder="true" />
+```
+
+## Setting Image bitmap to SDCircleImageView in Java
+```
+    sdCircleView.setInnerBitmapImage(bitmap);
+```

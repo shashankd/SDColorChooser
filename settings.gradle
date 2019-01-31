@@ -1,1 +1,1 @@
-include ':app', ':sdcolorchooser', ':sdcircleview'
+include ':app', ':sdcolorchooser'

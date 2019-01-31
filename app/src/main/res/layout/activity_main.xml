@@ -18,9 +18,8 @@
         custom:shadowColor="@android:color/darker_gray"
         custom:shadowWidth="@dimen/divider_width" />
 
-    <com.sdcircleview.SDCircleView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:custom="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/sdCircleView"
+    <com.sdcircleimageview.SDCircleImageView
+        android:id="@+id/sdCircleImageView"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_below="@id/sdColorChooser"

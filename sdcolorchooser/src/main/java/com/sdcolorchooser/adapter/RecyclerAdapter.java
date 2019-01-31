@@ -8,12 +8,11 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.sdcircleview.SDCircleView;
+import com.sdcircleimageview.SDCircleImageView;
 import com.sdcolorchooser.ColorSelectionListener;
 import com.sdcolorchooser.R;
 
@@ -31,11 +30,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        SDCircleView sdCircleView;
+        SDCircleImageView sdCircleImageView;
 
         public ViewHolder(View view) {
             super(view);
-            sdCircleView = view.findViewById(R.id.sdCircleView);
+            sdCircleImageView = view.findViewById(R.id.sdCircleImageView);
         }
     }
 
@@ -66,17 +65,17 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         if (drawable instanceof ColorDrawable) {
             ColorDrawable colorDrawable = (ColorDrawable) drawable;
             int color = colorDrawable.getColor();
-            viewHolder.sdCircleView.setInnerColor(color);
-            viewHolder.sdCircleView.setInnerBitmapImage(null);
+            viewHolder.sdCircleImageView.setInnerColor(color);
+            viewHolder.sdCircleImageView.setInnerBitmapImage(null);
         } else {
             BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
-            viewHolder.sdCircleView.setInnerBitmapImage(bitmapDrawable.getBitmap());
+            viewHolder.sdCircleImageView.setInnerBitmapImage(bitmapDrawable.getBitmap());
         }
 
-        viewHolder.sdCircleView.showBorder((selectedIndex == position));
-        viewHolder.sdCircleView.setBorderColor(highlightColor);
-        viewHolder.sdCircleView.setTag(position);
-        viewHolder.sdCircleView.setOnClickListener(new View.OnClickListener() {
+        viewHolder.sdCircleImageView.showBorder((selectedIndex == position));
+        viewHolder.sdCircleImageView.setBorderColor(highlightColor);
+        viewHolder.sdCircleImageView.setTag(position);
+        viewHolder.sdCircleImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (colorSelectionListener != null) {
