@@ -1,7 +1,7 @@
 ## SDColorChooser Android Library
     SDColorChooser is a chooser ViewGroup which returns selected imageview/color index
 
-![SDColorChooser] (https://github.com/shashankd/SDColorChooser/blob/master/Screenshot.png)
+![SDColorChooser](https://github.com/shashankd/SDColorChooser/blob/master/Screenshot.png)
 
 We can customise background color and other dimension properties.
 Pass the list of drawables (ImageDrawables or ColorDrawables)
